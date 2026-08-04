@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09162c"/>
+      <stop offset="1" stop-color="#18315d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#39c8b4" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#39c8b4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <circle cx="1015" cy="125" r="230" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
+  <circle cx="1015" cy="125" r="150" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
+  <rect x="76" y="72" width="60" height="60" rx="17" fill="#f7b731"/>
+  <path d="M106 85l5.1 10.4 11.5 1.7-8.3 8.1 2 11.5-10.3-5.4-10.3 5.4 2-11.5-8.3-8.1 11.5-1.7L106 85z" fill="#10213f"/>
+  <text x="156" y="113" fill="#fff" font-size="31" font-weight="700" font-family="Noto Sans JP, Yu Gothic, sans-serif">クチコミスターズ</text>
+  <text x="78" y="248" fill="#fff" font-size="62" font-weight="800" letter-spacing="-3" font-family="Noto Sans JP, Yu Gothic, sans-serif">良いお店なのに、</text>
+  <text x="78" y="330" fill="#ffc94f" font-size="62" font-weight="800" letter-spacing="-3" font-family="Noto Sans JP, Yu Gothic, sans-serif">クチコミで損を</text>
+  <text x="78" y="412" fill="#ffc94f" font-size="62" font-weight="800" letter-spacing="-3" font-family="Noto Sans JP, Yu Gothic, sans-serif">しないために。</text>
+  <rect x="79" y="438" width="560" height="6" rx="3" fill="#f7b731" opacity=".8"/>
+  <text x="80" y="506" fill="#fff" fill-opacity=".72" font-size="26" font-family="Noto Sans JP, Yu Gothic, sans-serif">Googleクチコミ獲得・運用支援</text>
+  <g transform="translate(850 190)">
+    <rect width="285" height="300" rx="28" fill="#fff"/>
+    <text x="30" y="49" fill="#68768a" font-size="16" font-family="Noto Sans JP, Yu Gothic, sans-serif">今月の運用状況</text>
+    <circle cx="244" cy="42" r="8" fill="#39c8b4"/>
+    <line x1="30" y1="72" x2="255" y2="72" stroke="#dfe5ef"/>
+    <text x="30" y="113" fill="#748195" font-size="14" font-family="Noto Sans JP, Yu Gothic, sans-serif">返信対応</text>
+    <text x="30" y="151" fill="#122039" font-size="30" font-weight="700" font-family="Noto Sans JP, Yu Gothic, sans-serif">100%</text>
+    <rect x="30" y="174" width="225" height="12" rx="6" fill="#e9edf4"/>
+    <rect x="30" y="174" width="225" height="12" rx="6" fill="#39c8b4"/>
+    <rect x="30" y="217" width="103" height="54" rx="11" fill="#f4f7fb"/>
+    <rect x="152" y="217" width="103" height="54" rx="11" fill="#fff5d7"/>
+    <text x="49" y="250" fill="#122039" font-size="20" font-weight="700" font-family="Noto Sans JP, Yu Gothic, sans-serif">投稿 4本</text>
+    <text x="168" y="250" fill="#122039" font-size="20" font-weight="700" font-family="Noto Sans JP, Yu Gothic, sans-serif">改善 1件</text>
+  </g>
+</svg>
