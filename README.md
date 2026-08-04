@@ -1,6 +1,7 @@
 # クチコミスターズ LP
 
 `killerword.info` で公開する、一般企業向け「Googleクチコミ獲得・運用支援」の静的LPです。
+https://aik38.github.io/killerword-lp/
 
 ## 構成
 
