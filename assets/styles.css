@@ -1005,6 +1005,8 @@ button:focus-visible {
 
 .price-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   color: var(--ink);
   background: var(--white);
@@ -1082,7 +1084,14 @@ button:focus-visible {
 }
 
 .price-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 30px 38px 38px;
+}
+
+.price-body > .button {
+  margin-top: auto;
 }
 
 .initial-fee {
