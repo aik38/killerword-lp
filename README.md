@@ -6,7 +6,7 @@ https://aik38.github.io/killerword-lp/
 ## 構成
 
 - `/`：サービスLP
-- `/contact/`：無料簡易診断・問い合わせ
+- `/contact/`：無料相談・問い合わせ
 - `/report-sample/`：月次レポートの表示例
 - `/privacy/`：プライバシーポリシー
 - `/terms/`：サービス利用条件
