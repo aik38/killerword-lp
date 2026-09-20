@@ -1,8 +1,8 @@
 # クチコミスターズ LP
 
-`killerword.info` で公開する、一般企業向け「Googleクチコミ獲得・運用支援」の静的LPです。
+`kuchikomi-stars.com` で公開する、一般企業向け「Googleクチコミ獲得・運用支援」の静的LPです。
 
-https://killerword.info/
+https://kuchikomi-stars.com/
 
 https://aik38.github.io/killerword-lp/
 
@@ -50,5 +50,5 @@ URLが空の間はGoogleフォーム用ボタンを非表示にし、メール�
 - GoogleフォームURL
 - GA4測定ID・Search Console確認コード
 - GitHub Pagesの公開元ブランチ
-- `killerword.info` のカスタムドメイン設定
+- `kuchikomi-stars.com` のカスタムドメイン設定
 - DNS変更時に既存のGoogle Workspace用MX・SPF・DKIM・DMARCを保持すること
