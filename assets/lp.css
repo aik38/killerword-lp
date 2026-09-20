@@ -2692,9 +2692,9 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(1.72rem, 8.1vw, 2.15rem);
+    font-size: clamp(1.82rem, 8.8vw, 2.35rem);
     line-height: 1.13;
-    letter-spacing: -.045em;
+    letter-spacing: -.05em;
   }
 
   .hero-title-line {
@@ -2785,9 +2785,9 @@ button:focus-visible {
   }
 
   #how .section-heading h2 {
-    font-size: clamp(1.12rem, 5.2vw, 1.45rem);
-    line-height: 1.45;
-    letter-spacing: -.045em;
+    font-size: clamp(1.28rem, 5.8vw, 1.55rem);
+    line-height: 1.42;
+    letter-spacing: -.05em;
   }
 
   .how-title-line + .how-title-line {
@@ -2994,7 +2994,8 @@ button:focus-visible {
 
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: 1.64rem;
+    font-size: 1.74rem;
+    letter-spacing: -.055em;
   }
 
   .hero-kicker strong {
@@ -3002,8 +3003,8 @@ button:focus-visible {
   }
 
   #how .section-heading h2 {
-    font-size: 1.06rem;
-    letter-spacing: -.05em;
+    font-size: 1.22rem;
+    letter-spacing: -.055em;
   }
 
   .button {
