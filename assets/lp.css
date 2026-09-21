@@ -3358,3 +3358,120 @@ button:focus-visible {
     padding: 14px 15px 16px;
   }
 }
+
+
+/* Four-step static demo page: 2026-09-21 */
+.demo-page .subpage-main {
+  background: linear-gradient(180deg, #f8f9fa 0%, #f6f9fe 100%);
+}
+
+.demo-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.demo-detail-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(32, 33, 36, .08);
+}
+
+.demo-detail-visual {
+  display: grid;
+  place-items: center;
+  min-height: 620px;
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
+  background: #f3f6fb;
+}
+
+.demo-detail-visual img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  max-height: 680px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(60, 64, 67, .14);
+}
+
+.demo-detail-card figcaption {
+  padding: 24px 24px 26px;
+}
+
+.demo-detail-card figcaption > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.demo-detail-card h2 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.demo-detail-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.8;
+}
+
+.demo-page-contact {
+  margin-top: 28px;
+}
+
+@media (max-width: 820px) {
+  .demo-detail-grid {
+    gap: 18px;
+  }
+
+  .demo-detail-visual {
+    min-height: 500px;
+    padding: 16px;
+  }
+
+  .demo-detail-card figcaption {
+    padding: 21px 19px 23px;
+  }
+}
+
+@media (max-width: 640px) {
+  .demo-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .demo-detail-visual {
+    min-height: 0;
+    padding: 14px 12px;
+  }
+
+  .demo-detail-visual img {
+    width: 100%;
+    max-width: 360px;
+    max-height: none;
+    border-radius: 13px;
+  }
+
+  .demo-detail-card {
+    border-radius: 18px;
+  }
+
+  .demo-detail-card h2 {
+    font-size: 1.08rem;
+  }
+
+  .demo-detail-card p {
+    font-size: .84rem;
+  }
+}
