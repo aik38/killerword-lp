@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://kuchikomi-stars.com/demo/">
   <link rel="icon" href="../assets/favicon.svg?v=20260920-2" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/lp.css?v=20260921-2">
+  <link rel="stylesheet" href="../assets/lp.css?v=20260922-1">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="投稿までのデモ｜クチコミスターズ">
@@ -52,8 +52,29 @@
     <section class="subpage-main">
       <div class="container demo-detail-grid" aria-label="投稿までのデモ 4ステップ">
         <figure class="demo-detail-card">
-          <div class="demo-detail-visual">
-            <img src="../assets/demo-01-satisfaction.webp" alt="満足度を選ぶ画面" loading="eager" width="320" height="594">
+          <div class="demo-system-stage" aria-label="満足度を選ぶ実画面イメージ">
+            <div class="review-demo-ui">
+              <div class="review-demo-shell">
+                <header class="review-demo-brand">
+                  <p class="review-demo-kicker">約1分で完了します</p>
+                  <h3>賃貸仲介デモ</h3>
+                  <span>ご利用いただいた感想をお聞かせください。</span>
+                </header>
+                <section class="review-demo-panel">
+                  <div class="review-demo-step">STEP 1</div>
+                  <h4>今回のご利用はいかがでしたか？</h4>
+                  <div class="review-demo-rating">
+                    <div class="is-selected"><i></i><span>5</span><small>とても満足</small></div>
+                    <div><i></i><span>4</span><small>満足</small></div>
+                    <div><i></i><span>3</span><small>普通</small></div>
+                    <div><i></i><span>2</span><small>やや不満</small></div>
+                    <div><i></i><span>1</span><small>不満</small></div>
+                  </div>
+                </section>
+                <div class="review-demo-primary">クチコミ文章を作成する</div>
+                <p class="review-demo-note">個人情報は入力しないでください。</p>
+              </div>
+            </div>
           </div>
           <figcaption>
             <span>STEP 1</span>
@@ -63,8 +84,25 @@
         </figure>
 
         <figure class="demo-detail-card">
-          <div class="demo-detail-visual">
-            <img src="../assets/demo-03-helpful.webp" alt="具体的に良かったことを選ぶアンケート画面" loading="lazy" width="320" height="626">
+          <div class="demo-system-stage" aria-label="質問に回答する実画面イメージ">
+            <div class="review-demo-ui">
+              <div class="review-demo-shell">
+                <section class="review-demo-panel review-demo-question">
+                  <div class="review-demo-step">QUESTION 3</div>
+                  <h4>物件探しの中で、具体的に助かったことを教えてください</h4>
+                  <p class="review-demo-help">最大2つまで選択できます</p>
+                  <div class="review-demo-choices">
+                    <div class="is-selected"><i>✓</i><span>希望に合う物件を提案してくれた</span></div>
+                    <div><i></i><span>複数の物件を比較できた</span></div>
+                    <div><i></i><span>物件ごとの違いを説明してくれた</span></div>
+                    <div><i></i><span>周辺環境について教えてくれた</span></div>
+                    <div class="is-selected"><i>✓</i><span>オンラインで相談・内見できた</span></div>
+                  </div>
+                </section>
+                <div class="review-demo-primary">クチコミ文章を作成する</div>
+                <p class="review-demo-note">回答内容をもとに文章候補を作成します。</p>
+              </div>
+            </div>
           </div>
           <figcaption>
             <span>STEP 2</span>
@@ -74,8 +112,30 @@
         </figure>
 
         <figure class="demo-detail-card">
-          <div class="demo-detail-visual">
-            <img src="../assets/demo-04-candidates.webp" alt="使いたいクチコミ文章候補を選ぶ画面" loading="lazy" width="320" height="779">
+          <div class="demo-system-stage" aria-label="使いたい文章を選ぶ実画面イメージ">
+            <div class="review-demo-ui">
+              <div class="review-demo-shell">
+                <header class="review-demo-brand compact">
+                  <p class="review-demo-kicker">賃貸仲介デモ</p>
+                  <h3>使いたい文章を選んでください</h3>
+                  <span>選択後に自由に編集できます。</span>
+                </header>
+                <article class="review-demo-candidate">
+                  <div class="review-demo-candidate-no">候補 1</div>
+                  <p>初めての一人暮らしで部屋を探していました。希望や条件を丁寧に聞いてもらえ、条件に合う物件を提案してもらえました。</p>
+                  <div class="review-demo-select">この文章を使う</div>
+                </article>
+                <article class="review-demo-candidate is-selected">
+                  <div class="review-demo-candidate-no">候補 2</div>
+                  <p>オンラインで相談や内見に対応してもらえたのが便利でした。希望条件もしっかり聞いてくれて、安心して進められました。</p>
+                  <div class="review-demo-select">この文章を使う</div>
+                </article>
+                <article class="review-demo-candidate">
+                  <div class="review-demo-candidate-no">候補 3</div>
+                  <p>希望を丁寧に聞いてもらい、物件探しから契約までスムーズに進みました。</p>
+                </article>
+              </div>
+            </div>
           </div>
           <figcaption>
             <span>STEP 3</span>
@@ -85,8 +145,25 @@
         </figure>
 
         <figure class="demo-detail-card">
-          <div class="demo-detail-visual">
-            <img src="../assets/demo-step-04-post.webp" alt="文章を確認・編集してクチコミ投稿ページへ進む最終確認画面" loading="lazy" width="530" height="828">
+          <div class="demo-system-stage" aria-label="文章を確認・編集して投稿ページへ進む実画面イメージ">
+            <div class="review-demo-ui">
+              <div class="review-demo-shell">
+                <header class="review-demo-brand compact">
+                  <p class="review-demo-kicker">賃貸仲介デモ</p>
+                  <h3>使いたい文章を選んでください</h3>
+                  <span>選択後に自由に編集できます。</span>
+                </header>
+                <section class="review-demo-panel review-demo-editor">
+                  <div class="review-demo-step">最終確認</div>
+                  <h4>必要に応じて編集できます</h4>
+                  <div class="review-demo-textarea">初めての一人暮らしで部屋探しを利用しました。オンラインで相談や内見に対応してもらえたうえ、希望条件に合う物件も提案してくれました。物件探しから契約までスムーズに進み、助かりました。</div>
+                  <p class="review-demo-count">90文字</p>
+                  <div class="review-demo-primary">コピーしてGoogleクチコミへ</div>
+                  <div class="review-demo-secondary">コピーのみ</div>
+                  <p class="review-demo-note left">Google画面を開いた時点を記録します。投稿完了としては記録しません。</p>
+                </section>
+              </div>
+            </div>
           </div>
           <figcaption>
             <span>STEP 4</span>
