@@ -66,5 +66,69 @@
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4Id)}`;
     document.head.appendChild(script);
+
+    const trackEvent = (eventName, params = {}) => {
+      window.gtag("event", eventName, {
+        page_path: window.location.pathname,
+        page_location: window.location.href,
+        ...params,
+      });
+    };
+
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const rawHref = link.getAttribute("href") || "";
+      let targetUrl = null;
+
+      try {
+        targetUrl = new URL(rawHref, window.location.href);
+      } catch (_) {
+        targetUrl = null;
+      }
+
+      link.addEventListener("click", () => {
+        if (/^mailto:/i.test(rawHref)) {
+          trackEvent("email_click", { link_url: rawHref });
+          return;
+        }
+
+        if (targetUrl && /(^|\.)lin\.ee$/i.test(targetUrl.hostname)) {
+          trackEvent("line_click", { link_url: targetUrl.href });
+          return;
+        }
+
+        if (!targetUrl || targetUrl.origin !== window.location.origin) return;
+
+        if (/\/demo\/?$/i.test(targetUrl.pathname)) {
+          trackEvent("view_demo", { link_url: targetUrl.href });
+        }
+
+        if (/\/contact\/?$/i.test(targetUrl.pathname)) {
+          trackEvent("contact_click", { link_url: targetUrl.href });
+        }
+      });
+    });
+
+    if (/\/contact\/?$/i.test(window.location.pathname)) {
+      trackEvent("contact_view");
+
+      const formFrame = document.querySelector(".contact-form-iframe");
+      if (formFrame && "IntersectionObserver" in window) {
+        let formOpenTracked = false;
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (
+              !formOpenTracked &&
+              entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.5)
+            ) {
+              formOpenTracked = true;
+              trackEvent("form_open");
+              observer.disconnect();
+            }
+          },
+          { threshold: [0.5] }
+        );
+        observer.observe(formFrame);
+      }
+    }
   }
 })();
