@@ -79,7 +79,7 @@ Googleフォームは `contact/index.html` 内のiframeで直接埋め込んで�
 - Webストリーム: `https://kuchikomi-stars.com/`
 - リアルタイム計測: 確認済み
 
-GA4では通常の流入計測に加え、営業チャネル別の流入をUTMで判別する方針です。UTM命名規則は [UTM計測・命名ルール](docs/utm-tracking.md) を正本とします。
+GA4では通常の流入計測に加え、営業チャネル別の流入をUTMで判別する方針です。UTM命名規則は [UTM計測・命名ルール](docs/utm-tracking.md) を正本とします。現在存在するリンクの監査結果は [UTMリンク監査](docs/utm-link-audit.md) に記録します。
 
 ### Search Console
 
