@@ -66,7 +66,7 @@ Googleフォームは `contact/index.html` 内のiframeで直接埋め込んで�
 
 営業送信元・問い合わせフォーム営業の入力メールは `m-asakura@kuchikomi-stars.com` で運用し、実送信・実フォーム入力のスモークテストを確認済みです。
 
-旧 `m-asakura@killerword.info` は停止せず、移行期間中の受信用として維持します。既存MX・SPF・DKIM等を不用意に変更しません。DMARCはブランドドメイン移行の最終確認項目として別途確認します。
+旧 `m-asakura@killerword.info` は停止せず、移行期間中の受信用として維持します。SPF / DKIM / DMARC は新ブランドメールでPASS確認済みで、DMARCは現在 `p=none` の監視モードです。
 
 ## GA4 / Search Console
 
@@ -92,6 +92,20 @@ GA4では通常の流入計測に加え、営業チャネル別の流入をUTM�
 - canonical: 各ページを `kuchikomi-stars.com` へ統一
 
 旧 `killerword.info` はSEO資産の引継ぎを主目的とせず、過去URL救済の301転送を維持します。旧Search Consoleプロパティの追加・アドレス変更は現時点では行いません。
+
+## 現在の営業フェーズ
+
+技術移行・計測基盤の整備は完了し、販売チャネル整備と改修版営業の検証フェーズへ移行しています。
+
+1. 営業メール・フォーム文 — **完了**
+2. オファー条件 — **完了**
+3. LP・投稿デモ導線 — **概ね完了**
+4. ブランド移行・メール認証・GA4・Search Console・UTM — **完了**
+5. ココナラ・ランサーズ・ジモティー — **次工程**
+6. 改修版営業開始 — **次工程**
+7. 500 / 1,000 / 2,000件時点のKPI判定 — **営業開始後**
+
+詳細な営業ロードマップはシステムrepo `aik38/kuchikomi-stars` の `docs/sales-roadmap.md` を正本とします。
 
 ## カスタムドメイン
 

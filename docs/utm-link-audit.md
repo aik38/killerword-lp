@@ -70,7 +70,7 @@ https://kuchikomi-stars.com/?utm_source=direct_email&utm_medium=outbound&utm_cam
 
 ### 判定
 
-**GitHub実装完了**（`aik38/auto-sales` PR #17）
+**実装完了・実テンプレート確認済み**（`aik38/auto-sales` PR #17）
 
 ## 4. 問い合わせフォーム営業監査
 
@@ -111,7 +111,7 @@ utm_content=footer_powered_by
 
 ### 判定
 
-**GitHub実装完了**（`aik38/kuchikomi-stars` PR #17）
+**実装・本番確認済み**（`aik38/kuchikomi-stars` PR #17）
 
 ## 6. 店舗納品QRカード・卓上POP等
 
@@ -139,7 +139,7 @@ utm_content=table_pop_v1
 
 ### 判定
 
-**GitHub実装完了**（`aik38/kuchikomi-stars` PR #17）
+**実装・本番確認済み**（`aik38/kuchikomi-stars` PR #17）
 
 管理画面から新規生成するQRについて、QRカード・卓上POP・ポスター/チラシを選び分けられるようにしています。既に印刷済み・配布済みのQRコードは差し替えません。
 
@@ -173,9 +173,9 @@ utm_content=table_pop_v1
 | LP内部リンク | 完了 | 不要 |
 | LP canonical | 完了 | 不要 |
 | LPメール/LINE/Googleフォーム | 完了 | UTM不要 |
-| 営業メール公式サイトURL | 完了 | GitHub実装済み |
-| 問い合わせフォーム営業 | 完了 | 現状不要 |
-| Powered by クチコミスターズ | 完了 | GitHub実装済み |
-| 店舗納品QR/POP | 完了 | GitHub実装済み・新規生成時に適用 |
-| ランサーズ等 | 未登録 | 登録時に適用 |
+| 営業メール公式サイトURL | 完了 | 実装済み・実テンプレート確認済み |
+| 問い合わせフォーム営業 | 完了 | 現状LP URLなしのため不要 |
+| Powered by クチコミスターズ | 完了 | 実装・本番確認済み |
+| 店舗納品QR/POP | 完了 | 実装・本番確認済み・新規生成時に適用 |
+| ランサーズ等 | 次工程 | 登録時に適用 |
 
