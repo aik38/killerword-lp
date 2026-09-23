@@ -29,11 +29,11 @@ LP自体は流入元ではないため `utm_source=lp` は使用しません。G
 | 導線 | 状態 | utm_source | utm_medium | utm_campaign | utm_content |
 |---|---|---|---|---|---|
 | 直接メール営業 | 使用中 | `direct_email` | `outbound` | 業種別 | `initial_v1` |
-| 問い合わせフォーム営業 | 使用中 | `contact_form` | `outbound` | 業種別 | `initial_v1` |
+| 問い合わせフォーム営業 | 予約値（現行本文にLP URLなし） | `contact_form` | `outbound` | 業種別 | `initial_v1` |
 | LINE営業 | 今後 | `line` | `messaging` | 業種別または汎用 | `initial_v1` |
-| ランサーズ | 今後登録 | `lancers` | `marketplace` | 原則汎用 | `service_listing_v1` |
-| ココナラ | 今後登録 | `coconala` | `marketplace` | 原則汎用 | `service_listing_v1` |
-| ジモティー | 今後登録 | `jimoty` | `marketplace` | 原則汎用 | `service_listing_v1` |
+| ランサーズ | 次工程 | `lancers` | `marketplace` | 原則汎用 | `service_listing_v1` |
+| ココナラ | 次工程 | `coconala` | `marketplace` | 原則汎用 | `service_listing_v1` |
+| ジモティー | 次工程 | `jimoty` | `marketplace` | 原則汎用 | `service_listing_v1` |
 | Powered by クチコミスターズ | 使用中 | `review_app` | `referral` | `reviews_general` | `footer_powered_by` |
 | FAX営業 | 将来候補 | `fax` | `offline` | 業種別 | `qr_v1` |
 | 紹介・代理店 | 将来 | `partner` | `referral` | `reviews_general` | `referral_v1` |
@@ -105,7 +105,7 @@ utm_content=footer_powered_by
 
 LP内部リンク、問い合わせフォーム営業、未登録のランサーズ・ココナラ・ジモティーには不要なUTMを追加しません。新チャネル・新業種は実際に運用開始する時点で本マスターへ追加します。
 
-本番反映後はGA4で必要な流入を確認し、既存CTA・フォーム・301転送・公開URLを壊していないことを確認します。
+2026-09-23時点で、必要なUTMのGitHub実装・本番反映・本番確認まで完了しています。今後はGA4へ蓄積される営業チャネル別データを使って、500 / 1,000 / 2,000件時点のKPI評価へつなげます。
 
 ## 8. 費用
 
