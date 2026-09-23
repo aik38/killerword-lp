@@ -15,7 +15,7 @@
 
 LP内部リンク、canonical、メールリンク、LINE、Googleフォーム等にはUTMを付与しません。
 
-なお、この監査ではリンクの洗い出しだけを行い、既存の営業文、contacts.xlsx、GUI、フォーム入力ロジック、LP HTML、アンケートシステムのコードは変更していません。
+監査後、2026-09-23に必要箇所だけ実装しました。営業文章、contacts.xlsx構造、GUI、フォーム入力ロジック、LP内部リンクは変更していません。
 
 ## 2. LP（killerword-lp）監査
 
@@ -48,11 +48,11 @@ LPは流入先であり、内部リンクにUTMを付けると本来の流入元
 
 ## 3. 営業メール監査
 
-現在の営業メールテンプレートでは、公式サイトURLは `https://kuchikomi-stars.com/` に移行済みで、UTMはまだ付いていません。
+営業メール本文に含まれる bare `https://kuchikomi-stars.com/` は、送信・プレビュー時にテンプレート名から業種を判定し、正式マスターのUTMを自動付与する実装へ更新済みです。
 
-### 将来の実装方針
+### 実装内容
 
-営業メール内の公式サイトURLだけを、テンプレートの対象業種に応じて次の形式へ変更します。
+営業メール内の公式サイトURLだけを、テンプレートの対象業種に応じて次の形式へ変換します。
 
 例: リフォーム
 
@@ -70,7 +70,7 @@ https://kuchikomi-stars.com/?utm_source=direct_email&utm_medium=outbound&utm_cam
 
 ### 判定
 
-**UTM実装対象 / 現時点では未実装**
+**GitHub実装完了**（`aik38/auto-sales` PR #17）
 
 ## 4. 問い合わせフォーム営業監査
 
@@ -100,15 +100,7 @@ utm_content=initial_v1
 
 ## 5. Powered by クチコミスターズ監査
 
-Webアンケートシステムの現行リンクは次のUTMを使用しています。
-
-```text
-utm_source=review.kuchikomi-stars.com
-utm_medium=referral
-utm_campaign=powered_by
-```
-
-正式UTMマスターでは次を採用しています。
+Webアンケートシステム下部のPowered byリンクは、正式UTMマスターへ統一済みです。
 
 ```text
 utm_source=review_app
@@ -119,9 +111,7 @@ utm_content=footer_powered_by
 
 ### 判定
 
-**既存UTMと正式マスターに差分あり**
-
-将来の実装対象です。ただし、ブランド移行の今回作業では `aik38/kuchikomi-stars` のコード変更は禁止されているため、この監査段階では変更しません。
+**GitHub実装完了**（`aik38/kuchikomi-stars` PR #17）
 
 ## 6. 店舗納品QRカード・卓上POP等
 
@@ -145,11 +135,13 @@ utm_campaign=survey_usage
 utm_content=table_pop_v1
 ```
 
+ポスター・チラシ用は `utm_content=poster_v1` を使用します。
+
 ### 判定
 
-**今後の新規生成物から適用する候補**
+**GitHub実装完了**（`aik38/kuchikomi-stars` PR #17）
 
-既に印刷済み・配布済みのQRコードをUTMのためだけに差し替える必要はありません。
+管理画面から新規生成するQRについて、QRカード・卓上POP・ポスター/チラシを選び分けられるようにしています。既に印刷済み・配布済みのQRコードは差し替えません。
 
 ## 7. 未登録・将来チャネル
 
@@ -164,16 +156,15 @@ utm_content=table_pop_v1
 
 登録・運用開始時に `docs/utm-tracking.md` のマスター値を使います。
 
-## 8. 実装優先順位
+## 8. 実装結果
 
-実装が許可された段階では、次の順序で行います。
+2026-09-23に次をGitHubへ実装済みです。
 
-1. 営業メールテンプレート内の公式サイトURL
-2. Powered by クチコミスターズ
-3. 新規生成する店舗納品QRカード・POP
-4. ランサーズ、ココナラ、ジモティー等の新規チャネル
+1. 営業メールの公式サイトURLへの業種別UTM自動付与
+2. Powered by クチコミスターズの正式マスターへの統一
+3. 新規生成する店舗納品QRカード・卓上POP・ポスター/チラシのUTM分離
 
-問い合わせフォーム営業は、LP URLを本文に入れない現行仕様のままなら対応不要です。
+問い合わせフォーム営業は、LP URLを本文に入れない現行仕様のため対応不要です。ランサーズ、ココナラ、ジモティー等は実際に登録・運用開始した時点で追加します。
 
 ## 9. 監査ステータス
 
@@ -182,9 +173,9 @@ utm_content=table_pop_v1
 | LP内部リンク | 完了 | 不要 |
 | LP canonical | 完了 | 不要 |
 | LPメール/LINE/Googleフォーム | 完了 | UTM不要 |
-| 営業メール公式サイトURL | 完了 | 将来実装 |
+| 営業メール公式サイトURL | 完了 | GitHub実装済み |
 | 問い合わせフォーム営業 | 完了 | 現状不要 |
-| Powered by クチコミスターズ | 完了 | 将来修正 |
-| 店舗納品QR/POP | 方針確定 | 新規生成時に適用 |
+| Powered by クチコミスターズ | 完了 | GitHub実装済み |
+| 店舗納品QR/POP | 完了 | GitHub実装済み・新規生成時に適用 |
 | ランサーズ等 | 未登録 | 登録時に適用 |
 
