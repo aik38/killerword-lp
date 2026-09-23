@@ -62,46 +62,36 @@ Googleフォームは `contact/index.html` 内のiframeで直接埋め込んで�
 
 ## メールドメイン移行
 
-2026-09-22時点ではブランドメール移行は未完了です。
+2026-09-23時点で、LPの公開問い合わせ先は `info@kuchikomi-stars.com` へ移行済みです。
 
-現在LP内には旧送信先 `m-asakura@killerword.info` が残っています。新 `m-asakura@kuchikomi-stars.com` の送受信、MX、SPF、DKIM、DMARC確認が完了するまでは、一斉変更しません。
+営業送信元・問い合わせフォーム営業の入力メールは `m-asakura@kuchikomi-stars.com` で運用し、実送信・実フォーム入力のスモークテストを確認済みです。
 
-移行完了後に以下を対象として更新します。
-
-- contact
-- privacy
-- terms
-- legal
-- footer
-- その他 `mailto:` リンク
+旧 `m-asakura@killerword.info` は停止せず、移行期間中の受信用として維持します。既存MX・SPF・DKIM等を不用意に変更しません。DMARCはブランドドメイン移行の最終確認項目として別途確認します。
 
 ## GA4 / Search Console
 
-2026-09-22時点では次工程です。
+2026-09-23時点で新ドメイン側の基本設定は完了しています。
 
 ### GA4
 
-各HTMLの `body` に `data-ga4-id=""` を用意しています。測定IDが空の間はGA4を読み込みません。
+- プロパティ: クチコミスターズ
+- 測定ID: `G-1ZKN01T0YL`
+- Webストリーム: `https://kuchikomi-stars.com/`
+- リアルタイム計測: 確認済み
 
-今後、最低限次を計測する予定です。
-
-- page_view
-- 投稿までのデモ閲覧
-- 導入相談クリック
-- contact到達
-- 問い合わせ完了
-- LINEクリック
-- メールクリック
+GA4では通常の流入計測に加え、営業チャネル別の流入をUTMで判別する方針です。UTM命名規則は [UTM計測・命名ルール](docs/utm-tracking.md) を正本とします。
 
 ### Search Console
 
-正規ドメインは `kuchikomi-stars.com` です。Search Consoleはドメインプロパティとして登録し、DNS TXTで所有権確認する方針です。
+正規ドメインは `kuchikomi-stars.com` です。
 
-- sitemap: https://kuchikomi-stars.com/sitemap.xml
-- robots: https://kuchikomi-stars.com/robots.txt
+- ドメインプロパティ: 所有権確認済み
+- sitemap: `https://kuchikomi-stars.com/sitemap.xml` 送信済み
+- GA4とのリンク: 作成済み
+- robots: `https://kuchikomi-stars.com/robots.txt`
 - canonical: 各ページを `kuchikomi-stars.com` へ統一
 
-HTMLの `meta[name="google-site-verification"]` は補助用として残していますが、ドメインプロパティの正規確認はDNSを使用する予定です。
+旧 `killerword.info` はSEO資産の引継ぎを主目的とせず、過去URL救済の301転送を維持します。旧Search Consoleプロパティの追加・アドレス変更は現時点では行いません。
 
 ## カスタムドメイン
 
@@ -137,5 +127,6 @@ http://localhost:8000/contact/
 - contactのGoogleフォームが表示できる
 - canonical / robots / sitemapが新ドメイン
 - 旧公開APIデモURLをLPへ直接掲載していない
-- メール移行完了前に旧メールを不用意に停止しない
-- GA4 / Search Console設定前後で既存CTA・フォームを壊さない
+- 旧メール `m-asakura@killerword.info` を不用意に停止しない
+- GA4 / Search Console / UTM設定変更時に既存CTA・フォームを壊さない
+- UTMは `docs/utm-tracking.md` の固定ルールに従い、内部リンクへ不用意に付与しない
